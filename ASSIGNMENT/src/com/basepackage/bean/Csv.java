@@ -2,54 +2,85 @@ package com.basepackage.bean;
 
 public class Csv {
 	
-	private  String username;
-	private  String password;
-	private String job_status;
-	private  String company;
+	private  int EmployeeId;
+	private  String EmployeeName;
+	private String Job_Status;
+	private  int DeptId;
+	private  String DeptName;
+	private  double Salary;
+	private  String JobLocation;
 	
-	public  Csv(String username, String password, String job_status, String company) {
-		this.username = username;
-		this.password = password;
-		this.job_status = job_status;
-		this.company = company;
+	public  Csv(int EmployeeId, String EmployeeName, String Job_Status,int DeptId, String DeptName,double Salary, String JobLocation) 
+	{
+		this.EmployeeId = EmployeeId;
+		this.EmployeeName = EmployeeName;
+		this.Job_Status = Job_Status;
+		this.DeptId = DeptId;
+		this.DeptName = DeptName;
+		this.Salary = Salary;
+		this.JobLocation = JobLocation;
 	}
-
-	public String getUsername() {
-		return username;
+	//setter method
+	public void setEmployeeId(int EmployeeId) {
+		this.EmployeeId = EmployeeId;
 	}
-
-	public void setUsername(String username) {
-		this.username = username;
+	
+	public void setEmployeeName(String EmployeeName) {
+		this.EmployeeName = EmployeeName;
 	}
-
-	public String getPassword() {
-		return password;
+	
+	public void setJob_Status(String Job_Status) {
+		this.Job_Status = Job_Status;
 	}
-
-	public void setPassword(String password) {
-		this.password = password;
+	
+	public void setDeptId(int DeptId) {
+		this.DeptId = DeptId;
 	}
-
+	
+	public void setDeptName(String DeptName) {
+		this.DeptName = DeptName;
+	}
+	
+	public void setSalary(double Salary) {
+		this.Salary = Salary;
+	}
+	
+	public void setJobLocation(String JobLocation) {
+		this.JobLocation = JobLocation;
+	}
+	
+	//getter method
+	public int getEmployeeId() {
+		return EmployeeId;
+	}
+	
+	public String getEmployeeName() {
+		return EmployeeName;
+	}
+	
+	public String getJob_Status() {
+		return Job_Status;
+	}
+	
+	public int getDeptId() {
+		return DeptId;
+	}
+	
+	public String getDeptName() {
+		return DeptName;
+	}
+	
+	public Double getSalary() {
+		return Salary;
+	}
+	
+	public String getJobLocation() {
+		return JobLocation;
+	}
 		@Override
 	public String toString()
 	{
-		return "Csv[username="+ username +",password="+ password + ", job_status="+ job_status + ",company="+company +"]";
+		return "Csv[EmployeeId="+ EmployeeId +",EmployeeName="+ EmployeeName + ", Job_Status="+ Job_Status + ",DeptId="+DeptId +",DeptName="+ DeptName + ", Salary="+ Salary + ",JobLocation="+JobLocation +"]";
 				 
-	}
-
-	public String getJob_status() {
-		return job_status;
-	}
-
-	public void setJob_status(String job_status) {
-		this.job_status = job_status;
-	}
-
-	public String getCompany() {
-		return company;
-	}
-
-	public void setCompany(String company) {
-		this.company = company;
 	}
 }
